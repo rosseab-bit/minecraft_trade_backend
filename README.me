@@ -1,0 +1,52 @@
+# 🟦 Minecraft Item Converter API
+
+Backend en **FastAPI** que permite convertir cualquier ítem, mineral o alimento de Minecraft utilizando un valor base (1 diamante). Incluye conversión dinámica, API Key para seguridad y estructura modular.
+
+---
+
+## 📌 Características
+
+- Conversión entre cualquier ítem definido en el catálogo.
+- Valor base configurable (Diamante = 1.0).
+- Endpoints REST con FastAPI.
+- Seguridad integrada mediante **API Key** (sin login para usuarios).
+- Arquitectura limpia: `routes/`, `models/`, `core/`.
+- Documentación automática con Swagger (`/docs`).
+
+---
+
+## 📁 Estructura del Proyecto
+
+backend/
+│── main.py
+│── requirements.txt
+│── README.md
+│── models/
+│ ├── item.py
+│ └── user.py
+│── routes/
+│ ├── convert.py
+│ └── auth.py
+│── core/
+│ ├── config.py
+│ └── security.py
+
+
+---
+
+## 🔧 Instalación
+
+### 1. Clonar el repositorio
+```bash
+git clone <url-del-repo>
+cd backend
+
+Linux / MacOS
+python3 -m venv venv
+source venv/bin/activate
+
+
+pip install -r requirements.txt
+
+
+uvicorn main:app --reload
